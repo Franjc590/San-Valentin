@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #ffe6e6; padding: 20px; }
+        h1 { color: #ff4d4d; }
+        button { background-color: #ff4d4d; color: white; border: none; padding: 10px 20px; font-size: 16px; margin: 10px; }
+        button:hover { background-color: #ff3333; cursor: pointer; }
+        .disabled { background-color: #cccccc; cursor: not-allowed; }
+        #agradecimiento, #mensajeNo, #imagenes, #teAmo { display: none; }
+        .te-amo { color: #ff4d4d; font-size: 14px; margin: 5px; display: inline-block; }
+    </style>
+    <script>
+        function mostrarAgradecimiento() {
+            document.getElementById('pregunta').style.display = 'none';
+            document.getElementById('agradecimiento').style.display = 'block';
+            document.getElementById('imagenes').style.display = 'block';
+        }
+        function mostrarMensaje() {
+            document.getElementById('pregunta').style.display = 'none';
+            document.getElementById('mensajeNo').style.display = 'block';
+        }
+        function mostrarTeAmo() {
+            document.getElementById('teAmo').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="pregunta">
+        <h1>¿Quieres ser mi San Valentín? ♥</h1>
+        <p>Tienes el poder de hacer mi día especial.</p>
+        <p><strong>PIENSA TU RESPUESTA</strong></p>
+        <img src="https://i.etsystatic.com/42320261/r/il/b917d8/6344385966/il_fullxfull.6344385966_nimj.jpg" alt="Osito" style="width: 200px; height: auto; margin: 10px;">
+        <br>
+        <button onclick="mostrarAgradecimiento()">¡Sí, quiero!</button>
+        <button class="disabled" onclick="mostrarMensaje()">Quiero pensarlo</button>
+    </div>
+    <div id="agradecimiento">
+        <h1>Gracias por hacerme tan feliz. Te amo mucho Shofi ♥</h1>
+        <img src="https://banderaacuadros.com.ar/imagenes/f1221.jpg" alt="Max Verstappen festejando" style="width: 200px; height: auto; margin: 10px;">
+        <p style="font-size: 12px;">Sabía que no dirías que no</p>
+        <button onclick="mostrarTeAmo()">Más...</button>
+    </div>
+    <div id="teAmo">
+        <div class="te-amo">Te amo</div>
+        <div class="te-amo">Te amo</div>
+        <!-- Repite este div aproximadamente 200 veces -->
+    </div>
+    <div id="mensajeNo">
+        <h1>Taylor no estaría orgullosa.</h1>
+        <img src="https://imagenes.montevideo.com.uy/imgnoticias/201611/_W933_80/591314.jpg" alt="Taylor Swift" style="width: 200px; height: auto; margin: 10px;">
+    </div>
+</body>
+</html>
